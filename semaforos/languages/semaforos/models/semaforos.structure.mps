@@ -113,6 +113,7 @@
   <node concept="1TIwiD" id="4u$al$KT966">
     <property role="EcuMT" value="5162296535922545030" />
     <property role="TrG5h" value="Simulacion" />
+    <property role="34LRSv" value="simular" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="4u$al$KT969" role="1TKVEl">
       <property role="IQ2nx" value="5162296535922545033" />
@@ -152,11 +153,13 @@
   <node concept="1TIwiD" id="4u$al$KT96u">
     <property role="EcuMT" value="5162296535922545054" />
     <property role="TrG5h" value="CarrilVehicular" />
+    <property role="34LRSv" value="vehicular" />
     <ref role="1TJDcQ" node="4u$al$KT96k" resolve="Carril" />
   </node>
   <node concept="1TIwiD" id="4u$al$KT96y">
     <property role="EcuMT" value="5162296535922545058" />
     <property role="TrG5h" value="CarrilPeatonal" />
+    <property role="34LRSv" value="peatonal" />
     <ref role="1TJDcQ" node="4u$al$KT96k" resolve="Carril" />
   </node>
   <node concept="1TIwiD" id="4u$al$KT96$">
@@ -195,6 +198,7 @@
   <node concept="1TIwiD" id="4u$al$KT96O">
     <property role="EcuMT" value="5162296535922545076" />
     <property role="TrG5h" value="Fase" />
+    <property role="34LRSv" value="fase" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="4u$al$KT96R" role="PzmwI">
       <ref role="PrY4T" node="4u$al$KT95E" resolve="ElementoNombrado" />
