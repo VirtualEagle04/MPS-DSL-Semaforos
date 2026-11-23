@@ -9,12 +9,27 @@
     <language id="28884b36-d3d0-4aff-9097-9e7cf5541d97" name="semaforos">
       <concept id="5162296535922545101" name="semaforos.structure.Interseccion" flags="ng" index="1Rgbyk">
         <child id="5162296535922545112" name="fases" index="1Rgby1" />
+        <child id="5162296535922545115" name="simulacion" index="1Rgby2" />
+        <child id="5162296535922545119" name="resultado" index="1Rgby6" />
         <child id="5162296535922545107" name="carriles" index="1Rgbya" />
         <child id="5162296535922545109" name="conflictos" index="1Rgbyc" />
       </concept>
+      <concept id="5162296535922545088" name="semaforos.structure.ResultadoVerificacion" flags="ng" index="1Rgbyp">
+        <property id="5162296535922545090" name="cicloTotal" index="1Rgbyr" />
+        <property id="5162296535922545092" name="fasesMinimas" index="1Rgbyt" />
+        <child id="5162296535922545097" name="diagnosticos" index="1Rgbyg" />
+      </concept>
       <concept id="5162296535922545054" name="semaforos.structure.CarrilVehicular" flags="ng" index="1Rgbz7" />
+      <concept id="5162296535922545035" name="semaforos.structure.Diagnostico" flags="ng" index="1Rgbzi">
+        <property id="5162296535922545041" name="mensaje" index="1Rgbz8" />
+        <property id="5162296535922545037" name="regla" index="1Rgbzk" />
+        <property id="5162296535922545038" name="severidad" index="1Rgbzn" />
+      </concept>
       <concept id="5162296535922545024" name="semaforos.structure.Duracion" flags="ng" index="1Rgbzp">
         <property id="5162296535922545027" name="segundos" index="1Rgbzq" />
+      </concept>
+      <concept id="5162296535922545030" name="semaforos.structure.Simulacion" flags="ng" index="1Rgbzv">
+        <property id="5162296535922545033" name="ciclos" index="1Rgbzg" />
       </concept>
       <concept id="5162296535922545076" name="semaforos.structure.Fase" flags="ng" index="1RgbzH">
         <child id="5162296535922545081" name="duracion" index="1Rgbzw" />
@@ -153,6 +168,63 @@
     <node concept="1RgbzP" id="3Vi8JEEtrgk" role="1Rgbyc">
       <ref role="1RgbzQ" node="3Vi8JEEtrg7" resolve="Sur" />
       <ref role="1RgbzC" node="3Vi8JEEtrgd" resolve="Oeste" />
+    </node>
+    <node concept="1Rgbzv" id="3Vi8JEEC$_F" role="1Rgby2">
+      <property role="1Rgbzg" value="1" />
+    </node>
+    <node concept="1Rgbyp" id="3Vi8JEEC$_G" role="1Rgby6">
+      <property role="1Rgbyr" value="70" />
+      <property role="1Rgbyt" value="2" />
+      <node concept="1Rgbzi" id="3Vi8JEEC$_H" role="1Rgbyg">
+        <property role="1Rgbzk" value="R1-R7" />
+        <property role="1Rgbz8" value="Plan seguro: sin conflictos, sin inanición, transiciones válidas." />
+        <property role="1Rgbzn" value="4u$al$KT95X/INFO" />
+      </node>
+      <node concept="1Rgbzi" id="3Vi8JEEC$_I" role="1Rgbyg">
+        <property role="1Rgbzk" value="R3" />
+        <property role="1Rgbz8" value="VERDE de Norte: 30 s de 70 s" />
+        <property role="1Rgbzn" value="4u$al$KT95X/INFO" />
+      </node>
+      <node concept="1Rgbzi" id="3Vi8JEEC$_J" role="1Rgbyg">
+        <property role="1Rgbzk" value="R3" />
+        <property role="1Rgbz8" value="VERDE de Sur: 30 s de 70 s" />
+        <property role="1Rgbzn" value="4u$al$KT95X/INFO" />
+      </node>
+      <node concept="1Rgbzi" id="3Vi8JEEC$_K" role="1Rgbyg">
+        <property role="1Rgbzk" value="R3" />
+        <property role="1Rgbz8" value="VERDE de Este: 30 s de 70 s" />
+        <property role="1Rgbzn" value="4u$al$KT95X/INFO" />
+      </node>
+      <node concept="1Rgbzi" id="3Vi8JEEC$_L" role="1Rgbyg">
+        <property role="1Rgbzk" value="R3" />
+        <property role="1Rgbz8" value="VERDE de Oeste: 30 s de 70 s" />
+        <property role="1Rgbzn" value="4u$al$KT95X/INFO" />
+      </node>
+      <node concept="1Rgbzi" id="3Vi8JEEC$_M" role="1Rgbyg">
+        <property role="1Rgbzk" value="R5" />
+        <property role="1Rgbz8" value="Plan mínimo sugerido (2 fases verdes): { Norte, Sur } { Este, Oeste } " />
+        <property role="1Rgbzn" value="4u$al$KT95X/INFO" />
+      </node>
+      <node concept="1Rgbzi" id="3Vi8JEEC$_N" role="1Rgbyg">
+        <property role="1Rgbzk" value="R6" />
+        <property role="1Rgbz8" value="Ciclo 1 | t=0-30s | F1 | Norte=VERDE Sur=VERDE Este=ROJO Oeste=ROJO " />
+        <property role="1Rgbzn" value="4u$al$KT95X/INFO" />
+      </node>
+      <node concept="1Rgbzi" id="3Vi8JEEC$_O" role="1Rgbyg">
+        <property role="1Rgbzk" value="R6" />
+        <property role="1Rgbz8" value="Ciclo 1 | t=30-35s | F2 | Norte=AMARILLO Sur=AMARILLO Este=ROJO Oeste=ROJO " />
+        <property role="1Rgbzn" value="4u$al$KT95X/INFO" />
+      </node>
+      <node concept="1Rgbzi" id="3Vi8JEEC$_P" role="1Rgbyg">
+        <property role="1Rgbzk" value="R6" />
+        <property role="1Rgbz8" value="Ciclo 1 | t=35-65s | F3 | Norte=ROJO Sur=ROJO Este=VERDE Oeste=VERDE " />
+        <property role="1Rgbzn" value="4u$al$KT95X/INFO" />
+      </node>
+      <node concept="1Rgbzi" id="3Vi8JEEC$_Q" role="1Rgbyg">
+        <property role="1Rgbzk" value="R6" />
+        <property role="1Rgbz8" value="Ciclo 1 | t=65-70s | F4 | Norte=ROJO Sur=ROJO Este=AMARILLO Oeste=AMARILLO " />
+        <property role="1Rgbzn" value="4u$al$KT95X/INFO" />
+      </node>
     </node>
   </node>
   <node concept="1Rgbyk" id="3Vi8JEEtrgI">
