@@ -24,6 +24,7 @@
         <reference id="5162296535922545073" name="b" index="1RgbzC" />
         <reference id="5162296535922545071" name="a" index="1RgbzQ" />
       </concept>
+      <concept id="5162296535922545058" name="semaforos.structure.CarrilPeatonal" flags="ng" index="1RgbzV" />
       <concept id="5162296535922545060" name="semaforos.structure.Asignacion" flags="ng" index="1RgbzX">
         <property id="5162296535922545063" name="color" index="1RgbzY" />
         <reference id="5162296535922545065" name="carril" index="1RgbzK" />
@@ -152,6 +153,244 @@
     <node concept="1RgbzP" id="3Vi8JEEtrgk" role="1Rgbyc">
       <ref role="1RgbzQ" node="3Vi8JEEtrg7" resolve="Sur" />
       <ref role="1RgbzC" node="3Vi8JEEtrgd" resolve="Oeste" />
+    </node>
+  </node>
+  <node concept="1Rgbyk" id="3Vi8JEEtrgI">
+    <property role="TrG5h" value="ConPeatones" />
+    <node concept="1RgbzH" id="3Vi8JEEtrgJ" role="1Rgby1">
+      <property role="TrG5h" value="F1" />
+      <node concept="1Rgbzp" id="3Vi8JEEtrgK" role="1Rgbzw">
+        <property role="1Rgbzq" value="30" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrgL" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95K/VERDE" />
+        <ref role="1RgbzK" node="3Vi8JEEtrh7" resolve="Norte" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrgM" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95K/VERDE" />
+        <ref role="1RgbzK" node="3Vi8JEEtrh8" resolve="Sur" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrgN" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrh9" resolve="Este" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrgO" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrha" resolve="Oeste" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhk" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhg" resolve="Cebra" />
+      </node>
+    </node>
+    <node concept="1RgbzH" id="3Vi8JEEtrgP" role="1Rgby1">
+      <property role="TrG5h" value="F2" />
+      <node concept="1Rgbzp" id="3Vi8JEEtrgQ" role="1Rgbzw">
+        <property role="1Rgbzq" value="5" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrgR" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95N/AMARILLO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrh7" resolve="Norte" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrgS" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95N/AMARILLO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrh8" resolve="Sur" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrgT" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrh9" resolve="Este" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrgU" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrha" resolve="Oeste" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhl" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhg" resolve="Cebra" />
+      </node>
+    </node>
+    <node concept="1RgbzH" id="3Vi8JEEtrgV" role="1Rgby1">
+      <property role="TrG5h" value="F3" />
+      <node concept="1Rgbzp" id="3Vi8JEEtrgW" role="1Rgbzw">
+        <property role="1Rgbzq" value="30" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrgX" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrh7" resolve="Norte" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrgY" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrh8" resolve="Sur" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrgZ" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95K/VERDE" />
+        <ref role="1RgbzK" node="3Vi8JEEtrh9" resolve="Este" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrh0" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95K/VERDE" />
+        <ref role="1RgbzK" node="3Vi8JEEtrha" resolve="Oeste" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhm" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95K/VERDE" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhg" resolve="Cebra" />
+      </node>
+    </node>
+    <node concept="1RgbzH" id="3Vi8JEEtrh1" role="1Rgby1">
+      <property role="TrG5h" value="F4" />
+      <node concept="1Rgbzp" id="3Vi8JEEtrh2" role="1Rgbzw">
+        <property role="1Rgbzq" value="5" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrh3" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrh7" resolve="Norte" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrh4" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrh8" resolve="Sur" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrh5" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95N/AMARILLO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrh9" resolve="Este" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrh6" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95N/AMARILLO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrha" resolve="Oeste" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhp" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhg" resolve="Cebra" />
+      </node>
+    </node>
+    <node concept="1Rgbz7" id="3Vi8JEEtrh7" role="1Rgbya">
+      <property role="TrG5h" value="Norte" />
+    </node>
+    <node concept="1Rgbz7" id="3Vi8JEEtrh8" role="1Rgbya">
+      <property role="TrG5h" value="Sur" />
+    </node>
+    <node concept="1Rgbz7" id="3Vi8JEEtrh9" role="1Rgbya">
+      <property role="TrG5h" value="Este" />
+    </node>
+    <node concept="1Rgbz7" id="3Vi8JEEtrha" role="1Rgbya">
+      <property role="TrG5h" value="Oeste" />
+    </node>
+    <node concept="1RgbzV" id="3Vi8JEEtrhg" role="1Rgbya">
+      <property role="TrG5h" value="Cebra" />
+    </node>
+    <node concept="1RgbzP" id="3Vi8JEEtrhb" role="1Rgbyc">
+      <ref role="1RgbzQ" node="3Vi8JEEtrh7" resolve="Norte" />
+      <ref role="1RgbzC" node="3Vi8JEEtrh9" resolve="Este" />
+    </node>
+    <node concept="1RgbzP" id="3Vi8JEEtrhc" role="1Rgbyc">
+      <ref role="1RgbzQ" node="3Vi8JEEtrh7" resolve="Norte" />
+      <ref role="1RgbzC" node="3Vi8JEEtrha" resolve="Oeste" />
+    </node>
+    <node concept="1RgbzP" id="3Vi8JEEtrhd" role="1Rgbyc">
+      <ref role="1RgbzQ" node="3Vi8JEEtrh8" resolve="Sur" />
+      <ref role="1RgbzC" node="3Vi8JEEtrh9" resolve="Este" />
+    </node>
+    <node concept="1RgbzP" id="3Vi8JEEtrhe" role="1Rgbyc">
+      <ref role="1RgbzQ" node="3Vi8JEEtrh8" resolve="Sur" />
+      <ref role="1RgbzC" node="3Vi8JEEtrha" resolve="Oeste" />
+    </node>
+    <node concept="1RgbzP" id="3Vi8JEEtrhi" role="1Rgbyc">
+      <ref role="1RgbzQ" node="3Vi8JEEtrhg" resolve="Cebra" />
+      <ref role="1RgbzC" node="3Vi8JEEtrg5" resolve="Norte" />
+    </node>
+    <node concept="1RgbzP" id="3Vi8JEEtrhj" role="1Rgbyc">
+      <ref role="1RgbzQ" node="3Vi8JEEtrhg" resolve="Cebra" />
+      <ref role="1RgbzC" node="3Vi8JEEtrg7" resolve="Sur" />
+    </node>
+  </node>
+  <node concept="1Rgbyk" id="3Vi8JEEtrhq">
+    <property role="TrG5h" value="CruceT" />
+    <node concept="1Rgbz7" id="3Vi8JEEtrhE" role="1Rgbya">
+      <property role="TrG5h" value="Norte" />
+    </node>
+    <node concept="1Rgbz7" id="3Vi8JEEtrhH" role="1Rgbya">
+      <property role="TrG5h" value="Sur" />
+    </node>
+    <node concept="1Rgbz7" id="3Vi8JEEtrhK" role="1Rgbya">
+      <property role="TrG5h" value="Este" />
+    </node>
+    <node concept="1RgbzH" id="3Vi8JEEtrhs" role="1Rgby1">
+      <property role="TrG5h" value="F1" />
+      <node concept="1Rgbzp" id="3Vi8JEEtrht" role="1Rgbzw">
+        <property role="1Rgbzq" value="40" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhu" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95K/VERDE" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhE" resolve="Norte" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhO" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95K/VERDE" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhH" resolve="Sur" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhP" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhK" resolve="Este" />
+      </node>
+    </node>
+    <node concept="1RgbzH" id="3Vi8JEEtrhQ" role="1Rgby1">
+      <property role="TrG5h" value="F2" />
+      <node concept="1Rgbzp" id="3Vi8JEEtrhR" role="1Rgbzw">
+        <property role="1Rgbzq" value="4" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhS" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95N/AMARILLO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhE" resolve="Norte" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhT" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95N/AMARILLO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhH" resolve="Sur" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhU" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhK" resolve="Este" />
+      </node>
+    </node>
+    <node concept="1RgbzH" id="3Vi8JEEtrhV" role="1Rgby1">
+      <property role="TrG5h" value="F3" />
+      <node concept="1Rgbzp" id="3Vi8JEEtrhW" role="1Rgbzw">
+        <property role="1Rgbzq" value="20" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhX" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhE" resolve="Norte" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhY" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhH" resolve="Sur" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtrhZ" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95K/VERDE" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhK" resolve="Este" />
+      </node>
+    </node>
+    <node concept="1RgbzH" id="3Vi8JEEtri0" role="1Rgby1">
+      <property role="TrG5h" value="F4" />
+      <node concept="1Rgbzp" id="3Vi8JEEtri1" role="1Rgbzw">
+        <property role="1Rgbzq" value="4" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtri2" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhE" resolve="Norte" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtri3" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95O/ROJO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhH" resolve="Sur" />
+      </node>
+      <node concept="1RgbzX" id="3Vi8JEEtri4" role="1Rgbz_">
+        <property role="1RgbzY" value="4u$al$KT95N/AMARILLO" />
+        <ref role="1RgbzK" node="3Vi8JEEtrhK" resolve="Este" />
+      </node>
+    </node>
+    <node concept="1RgbzP" id="3Vi8JEEtrhM" role="1Rgbyc">
+      <ref role="1RgbzQ" node="3Vi8JEEtrhE" resolve="Norte" />
+      <ref role="1RgbzC" node="3Vi8JEEtrhK" resolve="Este" />
+    </node>
+    <node concept="1RgbzP" id="3Vi8JEEtrhN" role="1Rgbyc">
+      <ref role="1RgbzQ" node="3Vi8JEEtrhH" resolve="Sur" />
+      <ref role="1RgbzC" node="3Vi8JEEtrhK" resolve="Este" />
     </node>
   </node>
 </model>
