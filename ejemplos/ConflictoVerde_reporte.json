@@ -1,0 +1,22 @@
+{
+  "interseccion": "ConflictoVerde",
+  "cicloTotal": 70,
+  "carriles": [
+    { "nombre": "Norte", "tipo": "vehicular", "verde": 30 },
+    { "nombre": "Sur", "tipo": "vehicular", "verde": 30 },
+    { "nombre": "Este", "tipo": "vehicular", "verde": 60 },
+    { "nombre": "Oeste", "tipo": "vehicular", "verde": 30 }
+  ],
+  "verificacion": {
+    "planSeguro": false,
+    "R1_conflictos": ["F1: Norte-Este", "F1: Sur-Este"],
+    "R2_sinVerde": [],
+    "R7_amarillos": []
+  },
+  "fasesMinimas": 2,
+  "planSugerido": [
+    ["Norte", "Sur"],
+    ["Este", "Oeste"]
+  ],
+  "simulacion": []
+}

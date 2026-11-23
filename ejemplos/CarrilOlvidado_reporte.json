@@ -1,0 +1,22 @@
+{
+  "interseccion": "CarrilOlvidado",
+  "cicloTotal": 70,
+  "carriles": [
+    { "nombre": "Norte", "tipo": "vehicular", "verde": 30 },
+    { "nombre": "Sur", "tipo": "vehicular", "verde": 30 },
+    { "nombre": "Este", "tipo": "vehicular", "verde": 30 },
+    { "nombre": "Oeste", "tipo": "vehicular", "verde": 0 }
+  ],
+  "verificacion": {
+    "planSeguro": false,
+    "R1_conflictos": [],
+    "R2_sinVerde": ["Oeste"],
+    "R7_amarillos": []
+  },
+  "fasesMinimas": 2,
+  "planSugerido": [
+    ["Norte", "Sur"],
+    ["Este", "Oeste"]
+  ],
+  "simulacion": []
+}

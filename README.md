@@ -25,6 +25,9 @@ Proyecto final — Compiladores, Universidad El Bosque.
 | `semaforos` → `constraints` | Reglas de alcance (scoping) |
 | `semaforos` → `typesystem` | Reglas de semántica estática |
 | `semaforos.sandbox` | Modelos de prueba válidos e inválidos |
+| `semaforos` → `behavior` | Razonador (R1–R7) |
+| `semaforos` → `intentions` | Acción "Analizar intersección" |
+| `semaforos` → `textGen` | Generación del reporte JSON |
 
 ## Ejemplo de modelo
 
@@ -64,3 +67,45 @@ interseccion Central {
 | `CarrilDuplicado` | Inválido | S2: nombre de carril repetido |
 
 Los errores aparecen subrayados en el editor; al pasar el cursor se muestra el mensaje con la regla incumplida.
+
+## Razonador
+
+El razonador está implementado en el Behavior de `Interseccion` y analiza el plan como un sistema de transición cíclico, δ(fᵢ) = f₍ᵢ₊₁₎ mod n.
+
+| Regla | Tipo | Descripción |
+|---|---|---|
+| R1 | Verificación | Ningún par de carriles en conflicto tiene paso (verde o amarillo) en la misma fase |
+| R2 | Verificación | Todo carril recibe verde al menos una vez por ciclo (ausencia de inanición) |
+| R3 | Inferencia | Ciclo total T y tiempo de verde G(l) por carril |
+| R4 | Garantía | Toda fase termina (asegurado por S3: duración > 0) |
+| R5 | Inferencia | Plan mínimo de fases mediante coloración voraz (Welsh-Powell) del grafo de conflictos |
+| R6 | Simulación | Ejecución del plan k ciclos, mostrando fase activa, tiempo y color de cada carril |
+| R7 | Verificación | Todo amarillo viene precedido de verde en la fase anterior |
+
+**Cómo usarlo:**
+- R1, R2 y R7 se marcan en vivo en el editor (errores y advertencias).
+- `Alt+Enter` sobre una intersección → **Analizar intersección (R1–R7)** escribe el análisis completo en el bloque `resultado` del modelo.
+- Para incluir la simulación, agregar `simular k ciclos` en la intersección antes de analizar.
+
+**Modelos rechazados por el razonador** (cumplen S1–S5, pero violan propiedades del plan):
+
+| Modelo | Regla violada |
+|---|---|
+| `ConflictoVerde` | R1: Norte y Este en verde a la vez |
+| `CarrilOlvidado` | R2: Oeste nunca recibe verde |
+| `AmarilloSinVerde` | R7 y R1: Este pasa de rojo a amarillo |
+
+## Generación de reportes
+
+El TextGen de `Interseccion` produce un archivo `<Nombre>_reporte.json` por cada intersección, con el resultado del razonador: ciclo total, verde por carril, verificación (R1, R2, R7), plan mínimo sugerido (R5) y simulación (R6).
+
+**Para generarlos:** clic derecho sobre el modelo `sandbox` → **Rebuild Model**. Los archivos quedan en `semaforos.sandbox/source_gen/semaforos/sandbox/`.
+
+**Ejemplos ya generados** en la carpeta [`ejemplos/`](ejemplos/):
+
+| Archivo | Resultado |
+|---|---|
+| `Central_reporte.json` | Plan seguro, con simulación de 1 ciclo |
+| `ConPeatones_reporte.json` | Plan seguro con carril peatonal |
+| `ConflictoVerde_reporte.json` | Rechazado por R1 |
+| `CarrilOlvidado_reporte.json` | Rechazado por R2 |
