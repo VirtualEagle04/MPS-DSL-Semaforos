@@ -109,3 +109,33 @@ El TextGen de `Interseccion` produce un archivo `<Nombre>_reporte.json` por cada
 | `ConPeatones_reporte.json` | Plan seguro con carril peatonal |
 | `ConflictoVerde_reporte.json` | Rechazado por R1 |
 | `CarrilOlvidado_reporte.json` | Rechazado por R2 |
+
+## Pruebas automatizadas
+
+Clic derecho sobre `semaforos.tests` → **Run tests**.
+
+**Resultado: 13 de 13 pruebas pasan.**
+
+![Resultado de las pruebas automatizadas](img/tests.png)
+
+**Errores detectados (7):** anotaciones `has error` / `has warning` sobre el nodo exacto donde cada regla debe reportar. Los modelos válidos no llevan anotación, así que la prueba falla si aparece un error inesperado.
+
+| Modelo | Nodo verificado | Regla |
+|---|---|---|
+| `DuracionCero` | Duración de F2 | S3 |
+| `PeatonAmarillo` | Asignación `Cebra = AMARILLO` | S5 |
+| `AsignacionIncompleta` | Fase F3 | S4 |
+| `ConflictoVerde` | Fase F1 | R1 |
+| `CarrilOlvidado` | Carril `Oeste` | R2 |
+| `AmarilloSinVerde` | Fase F2 | R1 y R7 |
+
+**Inferencias (6):** asserts sobre los resultados del razonador.
+
+| Prueba | Verifica |
+|---|---|
+| `cicloTotal` | R3: T = 70 s (Central) y 68 s (CruceT) |
+| `verdePorCarril` | R3: G(Norte) = 40 s y G(Este) = 20 s en CruceT |
+| `planMinimo` | R5: plan mínimo de 2 fases verdes |
+| `seguridad` | R1: Central sin conflictos y ConflictoVerde con conflictos |
+| `inanicion` | R2: Central sin inanición y CarrilOlvidado con 1 carril sin verde |
+| `simulacion` | R6: 4 pasos por ciclo (1 ciclo = 4, 2 ciclos = 8) |
