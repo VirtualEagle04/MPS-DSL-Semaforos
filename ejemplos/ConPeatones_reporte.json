@@ -1,0 +1,23 @@
+{
+  "interseccion": "ConPeatones",
+  "cicloTotal": 70,
+  "carriles": [
+    { "nombre": "Norte", "tipo": "vehicular", "verde": 30 },
+    { "nombre": "Sur", "tipo": "vehicular", "verde": 30 },
+    { "nombre": "Este", "tipo": "vehicular", "verde": 30 },
+    { "nombre": "Oeste", "tipo": "vehicular", "verde": 30 },
+    { "nombre": "Cebra", "tipo": "peatonal", "verde": 30 }
+  ],
+  "verificacion": {
+    "planSeguro": true,
+    "R1_conflictos": [],
+    "R2_sinVerde": [],
+    "R7_amarillos": []
+  },
+  "fasesMinimas": 2,
+  "planSugerido": [
+    ["Norte", "Sur"],
+    ["Este", "Oeste", "Cebra"]
+  ],
+  "simulacion": []
+}

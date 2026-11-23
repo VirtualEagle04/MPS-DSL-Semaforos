@@ -1,0 +1,22 @@
+{
+  "interseccion": "Central",
+  "cicloTotal": 70,
+  "carriles": [
+    { "nombre": "Norte", "tipo": "vehicular", "verde": 30 },
+    { "nombre": "Sur", "tipo": "vehicular", "verde": 30 },
+    { "nombre": "Este", "tipo": "vehicular", "verde": 30 },
+    { "nombre": "Oeste", "tipo": "vehicular", "verde": 30 }
+  ],
+  "verificacion": {
+    "planSeguro": true,
+    "R1_conflictos": [],
+    "R2_sinVerde": [],
+    "R7_amarillos": []
+  },
+  "fasesMinimas": 2,
+  "planSugerido": [
+    ["Norte", "Sur"],
+    ["Este", "Oeste"]
+  ],
+  "simulacion": ["Ciclo 1 | t=0-30s | F1 | Norte=VERDE Sur=VERDE Este=ROJO Oeste=ROJO ", "Ciclo 1 | t=30-35s | F2 | Norte=AMARILLO Sur=AMARILLO Este=ROJO Oeste=ROJO ", "Ciclo 1 | t=35-65s | F3 | Norte=ROJO Sur=ROJO Este=VERDE Oeste=VERDE ", "Ciclo 1 | t=65-70s | F4 | Norte=ROJO Sur=ROJO Este=AMARILLO Oeste=AMARILLO "]
+}
