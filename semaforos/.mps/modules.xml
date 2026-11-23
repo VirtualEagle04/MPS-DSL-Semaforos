@@ -4,6 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/semaforos.sandbox/semaforos.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/semaforos/semaforos.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/semaforos.tests/semaforos.tests.msd" folder="" />
     </projectModules>
   </component>
 </project>
